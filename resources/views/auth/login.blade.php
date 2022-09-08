@@ -17,6 +17,11 @@
     <link href="{{ asset('template/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ asset('template/css/soft-ui-dashboard.css?v=1.0.3') }}" rel="stylesheet" />
+    <style>
+        label{
+            color: #434849
+        }
+    </style>
 </head>
 
 <body>
@@ -28,13 +33,13 @@
                         <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
                             <div class="card card-plain mt-6 mb-6">
                                 <div class="card-header pb-0 text-left bg-transparent">
-                                    <h3 class="font-weight-bolder text-info text-gradient">Welcome back</h3>
-                                    <p class="mb-0">Enter your email and password to sign in</p>
+                                    <h3 class="font-weight-bolder" style="color: #79DAE8">Welcome back</h3>
+                                    <p class="mb-0" style="color: #434849">Enter your email and password to sign in</p>
                                 </div>
                                 <div class="card-body">
                                     <form role="form" method="POST" action="{{ route('login') }}">
                                         @csrf
-                                        <label>Email</label>
+                                        <label >Email</label>
                                         <div class="mb-3">
                                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                         </div>
@@ -50,15 +55,15 @@
                                             </label>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn bg-gradient-info w-100 mt-2 mb-0">Sign
+                                            <button type="submit" style="background-color: #79DAE8; color: #E8F9FD" class="btn w-100 mt-2 mb-0">Sign
                                                 in</button>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                                    <p class="mb-4 text-sm mx-auto">
+                                    <p class="mb-4 text-sm mx-auto" style="color: #434849">
                                         Don't have an account?
-                                        <a href="{{ route('register') }}" class="text-info text-gradient font-weight-bold">Sign up</a>
+                                        <a href="{{ route('register') }}" class="font-weight-bold" style="color: #79DAE8">Sign up</a>
                                     </p>
                                 </div>
                             </div>
@@ -66,7 +71,7 @@
                         <div class="col-md-6">
                             <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
                                 <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
-                                    style="background-image:url('{{ asset('template/img/curved-images/curved6.jpg') }}')"></div>
+                                    style="background-image:url('{{ asset('template/img/lobby.jpg') }}')"></div>
                             </div>
                         </div>
                     </div>
