@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\FasilitasHotelController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\UserController;
@@ -44,4 +44,4 @@ Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth', 'PreventBac
 });
 
 Route::resource('kamar',KamarController::class);
-Route::resource('fasilitas',FasilitasController::class);
+Route::resource('fasilitashotel', FasilitasHotelController::class);
