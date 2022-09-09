@@ -23,7 +23,7 @@
                       </div>
                       <div class="mb-3">
                           <label class="form-label">Foto Kamar</label>
-                          <input type="text" class="form-control" name="foto_kamar">
+                          <input type="file" class="form-control" name="foto_kamar">
                       </div>
                       <div class="mb-3">
                           <label class="form-label">Harga Kamar</label>

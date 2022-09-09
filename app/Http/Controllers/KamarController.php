@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kamar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class KamarController extends Controller
 {
@@ -44,13 +45,12 @@ class KamarController extends Controller
             'harga_kamar' => 'required',
         ]);
 
-        Kamar::create([
-            'tipe_kamar' => $request-> tipe_kamar,
-            'jumlah_kamar' => $request-> jumlah_kamar,
-            'fasilitas_kamar' => $request-> fasilitas_kamar,
-            'foto_kamar' => $request-> foto_kamar,
-            'harga_kamar' => $request-> harga_kamar
-        ]);
+        $kamar = Kamar::create($request->all());
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('img/', $request->file('foto')->getClientOriginalName());
+            $kamar->foto = $request->file('foto')->getClientOriginalName();
+            $kamar -> save();
+        }
         return redirect('kamar');
     }
 
@@ -87,7 +87,22 @@ class KamarController extends Controller
     public function update(Request $request, $id)
     {
         $kamar = Kamar::findorfail($id);
-        $kamar -> update($request->all());
+        $kamar->tipe_kamar = $request->tipe_kamar;
+        $kamar->jumlah_kamar = $request->jumlah_kamar;
+        $kamar->fasilitas_kamar = $request->fasilitas_kamar;
+        $kamar->harga_kamar = $request->harga_kamar;
+
+        if($request->file('foto')){
+            $file = $request->file('foto');
+
+            $filename = time().str_replace(" ", "", $file->getClientOriginalName());
+            $file->move('img', $filename);
+
+            File::delete('foto', $kamar->foto);
+
+            $kamar->foto = $filename;  
+        }
+        $kamar->save();
         return redirect('kamar');
     }
 

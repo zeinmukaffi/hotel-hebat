@@ -24,7 +24,9 @@
                       </div>
                       <div class="mb-3">
                           <label class="form-label">Foto Kamar</label>
-                          <input type="text" class="form-control" name="foto_kamar" value="{{ $kamar->foto_kamar }}">
+                          <br>
+                          <img src="{{ asset('img/'. $kamar->foto_kamar) }}" style="width: 200px; margin-bottom: 20px" alt="">
+                          <input type="file" class="form-control" name="foto_kamar">
                       </div>
                       <div class="mb-3">
                           <label class="form-label">Harga Kamar</label>

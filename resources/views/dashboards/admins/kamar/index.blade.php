@@ -61,9 +61,7 @@
                                     </p>
                                 </td>
                                 <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> foto_kamar }}
-                                    </p>
+                                    <img src="{{ asset('img/'. $item->foto_kamar) }}" style="width: 100px;" alt="">
                                 </td>
                                 <td class="align-middle text-center text-sm">
                                     <p class="text-xs font-weight-bold mb-0 text-center">
