@@ -117,6 +117,5 @@ class KamarController extends Controller
         $delete = Kamar::findorfail($id);
         $delete->delete();
         return back();
-
     }
 }
