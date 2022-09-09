@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FasilitasHotelController;
+use App\Http\Controllers\KamarController;
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\UserController;
 
@@ -40,3 +42,6 @@ Route::group(['prefix' => 'resepsionis', 'middleware' => ['isResepsionis', 'auth
 Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth', 'PreventBackHistory']], function(){
     Route::get('dashboard', [UserController::class, 'index'])->name('user.dashboard');
 });
+
+Route::resource('kamar',KamarController::class);
+Route::resource('fasilitashotel', FasilitasHotelController::class);

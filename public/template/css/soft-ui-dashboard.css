@@ -2685,7 +2685,7 @@ progress {
   border: 1px solid #d2d6da;
   appearance: none;
   border-radius: 0.5rem;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: box-shadow 0.15s ease,0.15s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2705,9 +2705,9 @@ progress {
 .form-control:focus {
   color: #495057;
   background-color: #fff;
-  border-color: #e293d3;
+  border-color: #79DAE8;
   outline: 0;
-  box-shadow: 0 0 0 2px #e9aede;
+  box-shadow: 0 0 0 2px #79DAE8;
 }
 
 .form-control::-webkit-date-and-time-value {
@@ -19476,7 +19476,7 @@ fieldset:disabled .btn {
 }
 
 .card.card-background.card-background-mask-primary:after {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #79DAE8 0%, #0AA1DD 100%);
   opacity: .85;
 }
 
@@ -20079,7 +20079,7 @@ label,
 }
 
 .bg-gradient-primary {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #79DAE8 0%, #0AA1DD 100%);
 }
 
 .bg-gradient-secondary {
@@ -21479,7 +21479,7 @@ hr.horizontal.gray-light {
 }
 
 .sidenav[data-color="primary"] .navbar-nav>.nav-item>.nav-link.active .icon {
-  background-image: linear-gradient(310deg, #cb0c9f 0%, #cb0c9f 100%);
+  background-image: linear-gradient(310deg, #79DAE8 0%, #0AA1DD 100%);
 }
 
 .sidenav[data-color="secondary"] .navbar-nav>.nav-item>.nav-link.active .icon {
@@ -21624,7 +21624,7 @@ hr.horizontal.gray-light {
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {
-  background-image: linear-gradient(310deg, #cb0c9f 0%, #cb0c9f 100%);
+  background-image: linear-gradient(310deg, #79DAE8 0%, #0AA1DD 100%);
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon svg .color-background,
@@ -22080,7 +22080,7 @@ hr.horizontal.gray-light {
 .pagination.pagination-primary .page-item.active>.page-link,
 .pagination.pagination-primary .page-item.active>.page-link:focus,
 .pagination.pagination-primary .page-item.active>.page-link:hover {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #79DAE8 0%, #0AA1DD 100%);
   border: none;
 }
 
@@ -24465,7 +24465,7 @@ span.flatpickr-weekday {
 }
 
 .noUi-connect {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #79DAE8 0%, #0AA1DD 100%);
 }
 
 /* Handles and cursors;
