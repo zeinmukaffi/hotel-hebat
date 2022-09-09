@@ -31,7 +31,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
-                            <div class="card card-plain mt-6 mb-6">
+                            <div class="card card-plain mt-6 mb-10">
                                 <div class="card-header pb-0 text-left bg-transparent">
                                     <h3 class="font-weight-bolder" style="color: #79DAE8">Welcome back</h3>
                                     <p class="mb-0" style="color: #434849">Enter your email and password to sign in</p>
