@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pemesanan;
+use App\Models\Kamar;
 use Illuminate\Http\Request;
 
 class PemesananController extends Controller
@@ -13,7 +15,8 @@ class PemesananController extends Controller
      */
     public function index()
     {
-        //
+        $datapemesanan = Pemesanan::with('kamar')->paginate();
+        return view('dashboards.admins.pemesanan.index', compact('datapemesanan'));
     }
 
     /**
