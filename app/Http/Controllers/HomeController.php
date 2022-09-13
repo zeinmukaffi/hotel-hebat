@@ -23,6 +23,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         return view('dashboards.users.index');
+=======
+        return view('beforeLogin.home');
+>>>>>>> f3e8fd4b09717414e9ff90ef11d3bac3101f0399
     }
+    
 }
