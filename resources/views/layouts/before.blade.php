@@ -22,25 +22,25 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand logo" href="#">hotel<span class="blue">hebat</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto" style="gap: 2rem">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">home</a>
+                        <a aria-current="page" href="/">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/fasilitas">fasilitas</a>
+                        <a aria-current="page" href="/fasilitas">fasilitas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/tipekamar">kamar</a>
+                        <a aria-current="page" href="/tipekamar">kamar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/login">sign in</a>
+                        <a aria-current="page" href="/login">sign in</a>
                     </li>
                     {{-- <li class="nav-item d-flex align-items-center">
               <a href="{{ route('logout') }}" class="nav-link text-body font-weight-bold px-0 btn btn-info"

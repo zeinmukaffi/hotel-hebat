@@ -22,30 +22,30 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand logo" href="#">hotel<span class="blue">hebat</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto" style="gap: 2rem">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/user/dashboard">home</a>
+                        <a aria-current="page" href="/user/dashboard">home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/userFasilitas">fasilitas</a>
+                        <a aria-current="page" href="/userFasilitas">fasilitas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/userKamar">kamar</a>
+                        <a aria-current="page" href="/userKamar">kamar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">booking</a>
+                        <a aria-current="page" href="#">booking</a>
                     </li>
-                    <li class="nav-item d-flex align-items-center">
-                        <a href="{{ route('logout') }}" class="nav-link text-body font-weight-bold px-0"
+                    <li class="nav-item">
+                        <a href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <span class="d-sm-inline d-none p-2 text-white">Log Out</span>
+                            <span>log out</span>
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST">@csrf</form>
                     </li>

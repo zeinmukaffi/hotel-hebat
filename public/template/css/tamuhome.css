@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 .navbar{
-    background-color: #434849;
+    background-color: var(--abu);
     height: 12vh;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
@@ -9,13 +9,36 @@
     /* top: 0; */
     z-index: 99;
     width: 100%;
-    color: white;
+    color: var(--lighterblue);
+}
+
+*{
+    --abu : #434849;
+    --lightblue : #79DAE8;
+    --sky : #0AA1DD;
+    --lighterblue : #E8F9FD;
+    --blue : #2155CD;
+}
+
+body{
+    background-color: var(--lighterblue);
 }
 
 nav{
     height: 12vh;
 }
 
+ul li a{
+    text-decoration: none;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+}
+
+.navbar a{
+    color: var(--lighterblue);
+}
 
 #home{
     height: 135vh;
@@ -28,7 +51,7 @@ nav{
 }
 
 .blue{
-    color: #79DAE8;
+    color: var(--lightblue);
 }
 
 .img{
@@ -43,19 +66,19 @@ nav{
     z-index: 2;
     text-align: center;
     margin: 300px 430px;
-    color: #434849;
+    color: var(--abu);
 }
 
 .text-1>p{
     font-size: 40px;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: var(--lighterblue);
 }
 
 .text-1>h1{
     font-size: 70px;
-    color: white;
+    color: var(--lighterblue);
     font-family: 'Poppins', sans-serif;
     line-height: 20px;
     font-weight: 700;
@@ -79,8 +102,8 @@ nav{
 }
 
 .box-1{
-    background-color: #434849;
-    color: white;
+    background-color: var(--abu);
+    color: var(--lighterblue);
     border-radius: 20px;
     padding: 5px 10px ;
 }
@@ -119,16 +142,16 @@ nav{
     align-items: center;
     width: 40%;
     z-index: 5;
-    color: white;
+    color: var(--lighterblue);
     justify-content: center;
 }
 
 #footer{
-    background-color: #434849;
+    background-color: var(--abu);
     padding-bottom: 50px;
     padding-top: 50px;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: var(--lighterblue);
 }
 
 .footer{
