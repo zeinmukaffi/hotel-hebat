@@ -8,7 +8,11 @@
                     {{ csrf_field() }}
                       <div class="mb-3">
                           <label class="form-label">Nama Kamar</label>
-                          <input type="text" class="form-control" placeholder="Nama Kamar" name="tipe_kamar">
+                          <select class="form-control" name="tipe_kamar" required>
+                    <option selected disabled>Tipe Kamar</option>
+                    <option value="Deluxe">Deluxe</option>
+                    <option value="Superior">Superior</option>
+                </select>
                       </div>
                       <div class="mb-3">
                           <label class="form-label">Jumlah Kamar</label>

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Pemesanan;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Kamar extends Model
 {
@@ -16,4 +17,11 @@ class Kamar extends Model
         'foto_kamar',
         'harga_kamar',
     ];
+
+    protected $primaryKey = "id";
+
+    public function pemesanan()
+    {
+        return $this->hasMany(Pemesanan::class);
+    }
 }
