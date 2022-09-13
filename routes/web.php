@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\FasilitasHotelController;
@@ -22,7 +23,7 @@ use App\Http\Controllers\FasilitasHotelController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('beforeLogin.home');
 });
 
 Route::middleware(['middleware' => 'PreventBackHistory'])->group(function(){
@@ -30,7 +31,7 @@ Route::middleware(['middleware' => 'PreventBackHistory'])->group(function(){
 });
 
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/book', [HomeController::class, 'book'])->name('book');  
 
 Route::group(['prefix' => 'admin', 'middleware' => ['isAdmin', 'auth', 'PreventBackHistory']], function(){
@@ -45,5 +46,9 @@ Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth', 'PreventBac
     Route::get('dashboard', [UserController::class, 'index'])->name('user.dashboard');
 });
 
-Route::resource('kamar',KamarController::class);
+Route::get('/tipekamar', [DashboardController::class, 'kamar'])->name('kamar');  
+Route::get('/fasilitas', [DashboardController::class, 'fasilitas'])->name('fasilitas');  
+Route::get('/userKamar', [UserController::class, 'userKamar'])->name('userKamar');  
+Route::get('/userFasilitas', [UserController::class, 'userFasilitas'])->name('userFasilitas');  
+Route::resource('kamar', KamarController::class);
 Route::resource('fasilitashotel', FasilitasHotelController::class);

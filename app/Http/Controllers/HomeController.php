@@ -23,10 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('beforeLogin.home');
     }
-    public function book()
-    {
-        return view('dashboards.users.book');
-    }
+    
 }

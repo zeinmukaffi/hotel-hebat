@@ -46,9 +46,9 @@ class KamarController extends Controller
         ]);
 
         $kamar = Kamar::create($request->all());
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('img/', $request->file('foto')->getClientOriginalName());
-            $kamar->foto = $request->file('foto')->getClientOriginalName();
+        if($request->hasFile('foto_kamar')){
+            $request->file('foto_kamar')->move('img/', $request->file('foto_kamar')->getClientOriginalName());
+            $kamar->foto_kamar = $request->file('foto_kamar')->getClientOriginalName();
             $kamar -> save();
         }
         return redirect('kamar');

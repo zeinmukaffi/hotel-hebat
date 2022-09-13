@@ -4,7 +4,7 @@
     <div class="col-12">
         <div class="card mb-4">
             <div class="card-body">
-                <form action="{{ url('kamar') }}" method="POST">
+                <form action="{{ url('kamar') }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                       <div class="mb-3">
                           <label class="form-label">Nama Kamar</label>
