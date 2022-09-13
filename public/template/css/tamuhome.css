@@ -42,7 +42,7 @@ nav{
     position: absolute;
     z-index: 2;
     text-align: center;
-    margin: 300px 540px;
+    margin: 300px 430px;
     color: #434849;
 }
 
@@ -75,7 +75,7 @@ nav{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .box-1{
@@ -107,17 +107,17 @@ nav{
 }
 
 .background>img{
-    width: 525px;
-    height: 335px;
+    width: 500px;
+    height: 300px;
     filter: brightness(.7);
 }
 
 .text{
     position: absolute;
-    margin: -190px 0;
+    margin: -170px 0;
     /* text-align: center; */
     align-items: center;
-    width: 35%;
+    width: 40%;
     z-index: 5;
     color: white;
     justify-content: center;

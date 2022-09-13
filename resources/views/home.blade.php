@@ -36,12 +36,12 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">booking</a>
               </li>
-              <li class="nav-item d-flex align-items-center">
+              {{-- <li class="nav-item d-flex align-items-center">
               <a href="{{ route('logout') }}" class="nav-link text-body font-weight-bold px-0 btn btn-info" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <span class="d-sm-inline d-none p-2 text-white">Log Out</span>
               </a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST">@csrf</form>
-            </li>
+            </li> --}}
             </ul>
           </div>
         </div>
@@ -55,7 +55,7 @@
             <div class="text-1">
                 <p>welcome to</p>
                 <h1>hotel<span class="blue">hebat</span></h1>
-                <a href=""><button type="button" class="btn btn-secondary">book now</button></a>
+                <a href="/book"><button type="button" class="btn btn-secondary">book now</button></a>
             </div>
         </div>
      </section>
