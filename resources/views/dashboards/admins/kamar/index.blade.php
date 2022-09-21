@@ -5,8 +5,8 @@
         <div class="card mb-4">
             <div class="card-header pb-0">
                 <h6>Table Kamar</h6>
-                <a href="{{ url('kamar/create') }}""
-                    class="btn btn-success">Tambah Data Kamar</a>
+                <a href="{{ url('kamar/create') }}" class="btn btn-success">Tambah Data Kamar</a>
+                <a href="{{ url('downloadpdfkamar') }}" class=" btn btn-success">Cetak PDF</a>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
                 <div class="table-responsive p-0">

@@ -7,6 +7,8 @@ use App\Models\FasilitasHotel;
 use App\Http\Requests\FasilitasHotelRequest;
 use Illuminate\Support\Facades\File;
 
+use PDF;
+
 class FasilitasHotelController extends Controller
 {
     /**
@@ -116,5 +118,18 @@ class FasilitasHotelController extends Controller
         $data = FasilitasHotel::findorfail($id);
         $data->delete();
         return redirect('fasilitashotel')->with('success', 'Data berhasil diDelete');
+    }
+
+    public function downloadpdf()
+    {
+        $data = FasilitasHotel::latest()->paginate(5);
+        $datas = [
+            'title' => 'Data Fasilitas Kamar',
+            'date' => date('d/m/Y'),
+            'data' => $data
+        ];
+
+        $pdf = PDF::loadView('dashboards.admins.fasilitashotel.pdf', $datas)->setOptions(['defaultFont' => 'sans-serif']);
+        return $pdf->download('laporan data fasilitas hotel.pdf');
     }
 }
