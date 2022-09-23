@@ -6,8 +6,11 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KamarController;
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PemesananController;
+
+
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\FasilitasHotelController;
 
@@ -46,8 +49,6 @@ Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth', 'PreventBac
     Route::get('dashboard', [UserController::class, 'index'])->name('user.dashboard');
 });
 
-
-
 Route::resource('pemesananhotel', PemesananController::class);
 Route::get('/tipekamar', [DashboardController::class, 'kamar'])->name('kamar');  
 Route::get('/fasilitas', [DashboardController::class, 'fasilitas'])->name('fasilitas');  
@@ -57,4 +58,3 @@ Route::get('/userFasilitas', [UserController::class, 'userFasilitas'])->name('us
 Route::get('/adminPemesanan', [UserController::class, 'adminPemesanan'])->name('adminPemesanan');  
 Route::resource('kamar', KamarController::class);
 Route::resource('fasilitashotel', FasilitasHotelController::class);
-
