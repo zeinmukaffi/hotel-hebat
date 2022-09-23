@@ -34,30 +34,12 @@
 <section id="location">
     <h1>our location</h1>
     <div class="box-2">
-        <div class="location">
-            <div class="background"><img src="{{asset('template/img/jakarta.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="text">
-                <h3>Jakarta</h3>
-            </div>
-        </div>
-        <div class="location">
-            <div class="background"><img src="{{asset('template/img/bali.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="text">
-                <h3>Bali</h3>
-            </div>
-        </div>
-        <div class="location">
-            <div class="background"><img src="{{asset('template/img/bandung.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="text">
-                <h3>Bandung</h3>
-            </div>
-        </div>
-        <div class="location">
-            <div class="background"><img src="{{asset('template/img/jogja.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="text">
-                <h3>Yogyakarta</h3>
-            </div>
-        </div>
+            <div class="background"><h3>Jakarta</h3></div>
+            <div class="background-2"><h3>Bandung</h3></div>
+    </div>
+    <div class="box-2">
+            <div class="background-3"><h3>Bali</h3></div>
+            <div class="background-4"><h3>Yogyakarta</h3></div>
     </div>
 </section>
 
