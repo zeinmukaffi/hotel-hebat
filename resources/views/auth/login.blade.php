@@ -21,6 +21,9 @@
         label{
             color: #434849
         }
+        body{
+            background-color: #E8F9FD
+        }
     </style>
 </head>
 

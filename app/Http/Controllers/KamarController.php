@@ -6,6 +6,8 @@ use App\Models\Kamar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
+use PDF;
+
 class KamarController extends Controller
 {
     /**
@@ -118,5 +120,18 @@ class KamarController extends Controller
         $delete = Kamar::findorfail($id);
         $delete->delete();
         return back();
+    }
+
+    public function downloadpdf()
+    {
+        $data = Kamar::latest()->paginate(5);
+        $datas = [
+            'title' => 'Data Kamar',
+            'date' => date('d/m/Y'),
+            'data' => $data
+        ];
+
+        $pdf = PDF::loadView('dashboards.admins.kamar.pdf', $datas)->setOptions(['defaultFont' => 'sans-serif']);
+        return $pdf->download('laporan data kamar.pdf');
     }
 }

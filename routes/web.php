@@ -7,12 +7,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KamarController;
 
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PemesananController;
-
-
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\FasilitasHotelController;
+use App\Models\FasilitasHotel;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +58,6 @@ Route::get('/userFasilitas', [UserController::class, 'userFasilitas'])->name('us
 Route::get('/adminPemesanan', [UserController::class, 'adminPemesanan'])->name('adminPemesanan');  
 Route::resource('kamar', KamarController::class);
 Route::resource('fasilitashotel', FasilitasHotelController::class);
+
+Route::get('downloadpdfkamar', [KamarController::class, 'downloadpdf'])->name('downloadpdf');
+Route::get('downloadpdffasilitashhotel', [FasilitasHotelController::class, 'downloadpdf'])->name('downloadpdf');
