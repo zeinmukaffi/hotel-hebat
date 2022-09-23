@@ -20,6 +20,9 @@
       label{
         color: #434849
       }
+      body{
+        background-color: #E8F9FD
+      }
     </style>
 </head>
 
@@ -27,7 +30,7 @@
     <section class="min-vh-90" mb-2>
         <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
             style="background-image: url('{{ asset('template/img/lobby.jpg') }}');">
-            <span class="mask opacity-3" style="background-color: #79DAE8"></span>
+            <span class="mask opacity-1" style="background-color: #79DAE8"></span>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5 text-center mx-auto">
@@ -40,7 +43,7 @@
         <div class="container">
             <div class="row mt-lg-n10 mt-md-n11 mt-n10">
                 <div class="col-xl- col-lg-5 col-md-7 mx-auto">
-                    <div class="card z-index-0 mb-5">
+                    <div class="card z-index-0 mb-5" style="background-color: #E8F9FD">
                         <div class="card-body">
                             <form role="form text-left" method="POST" action="{{ route('register') }}">
                                 @csrf
