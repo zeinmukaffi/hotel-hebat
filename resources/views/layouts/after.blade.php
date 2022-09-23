@@ -40,7 +40,10 @@
                         <a class="nav-link active" aria-current="page" href="/userKamar">kamar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">booking</a>
+                        <a class="nav-link active" aria-current="page" href="/pemesananhotel">booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/usertable">Data Pesanan</a>
                     </li>
                     <li class="nav-item d-flex align-items-center">
                         <a href="{{ route('logout') }}" class="nav-link text-body font-weight-bold px-0"

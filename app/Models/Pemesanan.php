@@ -16,7 +16,7 @@ class Pemesanan extends Model
         'email',
         'no_telp',
         'tipe_kamar_id',
-        'jumlah_kamar',
+        'jumlah_kamar_pesan',
         'tanggal_checkin',
         'tanggal_checkout',
         'harga',

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email');
             $table->bigInteger('no_telp');
             $table->foreignId('tipe_kamar_id');
-            $table->integer('jumlah_kamar');
+            $table->integer('jumlah_kamar_pesan');
             $table->date('tanggal_checkin');
             $table->date('tanggal_checkout');
             $table->integer('harga');
