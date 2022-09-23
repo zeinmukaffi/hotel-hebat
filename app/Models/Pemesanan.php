@@ -15,7 +15,7 @@ class Pemesanan extends Model
         'alamat',
         'email',
         'no_telp',
-        'tipe_kamar_id',
+        'nomor_kamar_id',
         'jumlah_kamar_pesan',
         'tanggal_checkin',
         'tanggal_checkout',
@@ -24,6 +24,6 @@ class Pemesanan extends Model
 
     public function kamar()
     {
-        return $this->belongsTo(Kamar::class, 'tipe_kamar_id');
+        return $this->belongsTo(Kamar::class, 'nomor_kamar_id');
     }
 }

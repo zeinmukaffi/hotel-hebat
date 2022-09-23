@@ -6,13 +6,14 @@
             <div class="card-body">
                 <form action="{{ url('kamar') }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                      <div class="mb-3">
+                     
+                <div class="mb-3">
                           <label class="form-label">Nama Kamar</label>
-                          <select class="form-control" name="tipe_kamar" required>
-                    <option selected disabled>Tipe Kamar</option>
-                    <option value="Deluxe">Deluxe</option>
-                    <option value="Superior">Superior</option>
-                </select>
+                          <input type="text" class="form-control" placeholder="Masukan Tipe Kamar" name="tipe_kamar">
+                <div class="mb-3">
+                          <label class="form-label">Nomor Kamar</label>
+                          <input type="number" class="form-control" placeholder="Masukan Nomor Kamar" name="nomor_kamar">
+                      </div>
                       </div>
                       <div class="mb-3">
                           <label class="form-label">Jumlah Kamar</label>

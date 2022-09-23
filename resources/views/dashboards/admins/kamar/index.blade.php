@@ -5,7 +5,7 @@
         <div class="card mb-4">
             <div class="card-header pb-0">
                 <h6>Table Kamar</h6>
-                <a href="{{ url('kamar/create') }}""
+                <a href="{{ url('kamar/create') }}"
                     class="btn btn-success">Tambah Data Kamar</a>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
@@ -19,6 +19,9 @@
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Tipe Kamar</th>
+                                <th
+                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Nomor Kamar</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Jumlah Kamar</th>
@@ -48,6 +51,11 @@
                                 <td class="align-middle text-center text-sm">
                                     <p class="text-xs font-weight-bold mb-0 text-center">
                                         {{ $item -> tipe_kamar }}
+                                    </p>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <p class="text-xs font-weight-bold mb-0 text-center">
+                                        {{ $item -> nomor_kamar }}
                                     </p>
                                 </td>
                                 <td class="align-middle text-center text-sm">
