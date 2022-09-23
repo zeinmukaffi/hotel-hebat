@@ -15,8 +15,10 @@ class PemesananController extends Controller
      */
     public function index()
     {
-        $datapemesanan = Pemesanan::with('kamar')->paginate();
-        return view('dashboards.admins.pemesanan.index', compact('datapemesanan'));
+        // $datapemesanan = Pemesanan::latest()->with('kamar');
+        $pesan = Pemesanan::latest()->with('kamar');
+        $kamar = Kamar::all();
+        return view('dashboards.users.book', compact('kamar','pesan'));
     }
 
     /**
@@ -26,7 +28,7 @@ class PemesananController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboards.users.book');
     }
 
     /**
@@ -37,7 +39,33 @@ class PemesananController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $this->validate($request,[
+            'nama' => 'required',
+            'alamat' => 'required',
+            'email' => 'required',
+            'no_telp' => 'required',
+            'tipe_kamar_id' => 'required',
+            'jumlah_kamar_pesan' => 'required',
+            'tanggal_checkin' => 'required',
+            'tanggal_checkout'=> 'required',
+            'harga' => 'required',
+        ]);
+
+        Pemesanan::create([
+           'nama' => $request->nama,
+           'alamat' => $request->alamat,
+           'email' => $request->email,
+           'no_telp' => $request->no_telp,
+           'tipe_kamar_id' => $request->tipe_kamar_id,
+           'jumlah_kamar_pesan' => $request->jumlah_kamar_pesan,
+           'tanggal_checkin' => $request->tanggal_checkin,
+           'tanggal_checkout' => $request->tanggal_checkout,
+           'harga' => $request->harga,
+
+        ]);
+
+        return Redirect('/usertable')->with('success', 'data berhasil ditambahkan');
     }
 
     /**

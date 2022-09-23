@@ -2,11 +2,12 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KamarController;
+
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\ResepsionisController;
@@ -52,7 +53,9 @@ Route::resource('pemesananhotel', PemesananController::class);
 Route::get('/tipekamar', [DashboardController::class, 'kamar'])->name('kamar');  
 Route::get('/fasilitas', [DashboardController::class, 'fasilitas'])->name('fasilitas');  
 Route::get('/userKamar', [UserController::class, 'userKamar'])->name('userKamar');  
+Route::get('/usertable', [UserController::class, 'usertable'])->name('usertable');  
 Route::get('/userFasilitas', [UserController::class, 'userFasilitas'])->name('userFasilitas');  
+Route::get('/adminPemesanan', [UserController::class, 'adminPemesanan'])->name('adminPemesanan');  
 Route::resource('kamar', KamarController::class);
 Route::resource('fasilitashotel', FasilitasHotelController::class);
 

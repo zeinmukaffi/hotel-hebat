@@ -62,11 +62,13 @@ ul li a:hover{
 }
 
 .text-1{
-    position: absolute;
+    position: relative;
     z-index: 2;
     text-align: center;
-    margin: 300px 430px;
-    color: var(--abu);
+
+    padding-top: 300px;
+    color: #434849;
+
 }
 
 .text-1>p{
@@ -124,25 +126,78 @@ ul li a:hover{
 
 .box-2{
     display: flex;
-    flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
 }
 
-.background>img{
-    width: 500px;
-    height: 300px;
-    filter: brightness(.7);
+.background{
+    background-image: url(/template/img/jakarta.jpg);
+    width: 600px;
+    height: 350px;
+    background-size: cover;
+    margin-top: 20px;
+}
+.background-2{
+    background-image: url(/template/img/bandung.jpg);
+    width: 600px;
+    height: 350px;
+    background-size: cover;
+    margin-top: 20px;
+}
+.background-3{
+    background-image: url(/template/img/bali.jpg);
+    width: 600px;
+    height: 350px;
+    background-size: cover;
+    margin-top: 20px;
+}
+.background-4{
+    background-image: url(/template/img/jogja.jpg);
+    width: 600px;
+    height: 350px;
+    background-size: cover;
+    margin-top: 20px;
+}
+
+.background>h3{
+    padding-top: 180px;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.background-2>h3{
+    padding-top: 180px;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.background-3>h3{
+    padding-top: 180px;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.background-4>h3{
+    padding-top: 180px;
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .text{
-    position: absolute;
-    margin: -170px 0;
+    position: relative;
+    /* margin: -170px 0; */
     /* text-align: center; */
     align-items: center;
-    width: 40%;
+    /* width: 40%; */
     z-index: 5;
-    color: var(--lighterblue);
+
+    color: black;
+
     justify-content: center;
 }
 
@@ -226,4 +281,19 @@ ul li a:hover{
     font-size: 20px;
 }
 
+#booking{
+    padding-top: 15vh;
+    padding-bottom: 3vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+#booking h1{
+    font-weight: 700;
+}
+
+#table{
+    padding-top: 15vh;
+    font-family: 'Poppins', sans-serif;
+}
 
