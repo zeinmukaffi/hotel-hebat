@@ -112,4 +112,17 @@ class PemesananController extends Controller
     {
         //
     }
+
+    public function downloadpdf()
+    {
+        $data = Pemesanan::latest()->paginate();
+        $datas = [
+            'title' => 'Data Pemesanan',
+            'date' => date('d/m/Y'),
+            'data' => $data
+        ];
+
+        $pdf = PDF::loadView('dashboards.admins.pemesanan.pdf', $datas)->setOptions(['defaultFont' => 'sans-serif']);
+        return $pdf->download('laporan data pemesanan.pdf');
+    }
 }
