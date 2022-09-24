@@ -12,6 +12,10 @@
                           <input type="text" class="form-control" placeholder="Nama Kamar" name="tipe_kamar" value="{{ $kamar->tipe_kamar }}">
                       </div>
                       <div class="mb-3">
+                          <label class="form-label">Nomor Kamar</label>
+                          <input type="text" class="form-control" placeholder="Nama Kamar" name="tipe_kamar" value="{{ $kamar->nomor_kamar }}">
+                      </div>
+                      <div class="mb-3">
                           <label class="form-label">Jumlah Kamar</label>
                           <input type="number" class="form-control" placeholder="Jumlah Kamar Yang Tersedia" name="jumlah_kamar" value="{{ $kamar->jumlah_kamar }}">
                       </div>

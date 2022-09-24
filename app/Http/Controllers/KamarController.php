@@ -41,6 +41,7 @@ class KamarController extends Controller
     {
         $this->validate($request,[
             'tipe_kamar' => 'required',
+            'nomor_kamar' => 'required',
             'jumlah_kamar' => 'required',
             'fasilitas_kamar' => 'required',
             'foto_kamar' => 'required',
