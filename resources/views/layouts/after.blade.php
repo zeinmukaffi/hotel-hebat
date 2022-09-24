@@ -19,9 +19,6 @@
 </head>
 
 <body>
-
-
-
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand logo" href="#">hotel<span class="blue">hebat</span></a>
@@ -40,13 +37,11 @@
                         <a aria-current="page" href="/userKamar">kamar</a>
                     </li>
                     <li class="nav-item">
-
-                        <a class="nav-link active" aria-current="page" href="/pemesananhotel">booking</a>
+                        <a href="/pemesananhotel">booking</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/usertable">Data Pesanan</a>
-
-                    </li>
+                    {{-- <li class="nav-item">
+                        <a aria-current="page" href="/usertable">data pesan</a>
+                    </li> --}}
                     <li class="nav-item">
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

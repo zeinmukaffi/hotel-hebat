@@ -1,7 +1,6 @@
 @extends('layouts.after')
 @section('content')
 
-<section id="table">
 <div class="row">
     <div class="col-11 mx-auto">
         <div class="card mb-4">
@@ -9,7 +8,7 @@
                 <h6 class="fw-bold">Table Pesanan</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
-                <div class=" p-0">
+                <div class="table-responsive p-0 mt-5">
                     <table class="table align-items-center mb-0">
                         <thead>
                             <tr>
@@ -18,22 +17,22 @@
                                     No</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Nama</th>
+                                    Nama Pemesan</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Alamat</th>
+                                    Alamat Pemesan</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Email</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Telepon</th>
+                                    Nomor Telepon</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Tipe Kamar</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    jumlah Kamar</th>
+                                    Jumlah Kamar</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Tanggal Checkin</th>
@@ -42,14 +41,9 @@
                                     Tanggal Checkout</th>
                                 <th
                                     class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Harga</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Options</th>
+                                    Total Harga</th>
                             </tr>
                         </thead>
-
-
                         <tbody>
                             @foreach ($datapemesanan as $index => $item)
                             <tr>
@@ -103,15 +97,6 @@
                                         {{ $item -> harga }}
                                     </p>
                                 </td>
-                                <td class="align-middle text-center text-sm">
-                                <form action="{{ url('pemesananhotel',$item->id) }}" method="POST">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit" class="btn btn-icon btn-danger delete"
-                                            data-name="{{ $item->id }}"><i class="fas fa-trash"></i></button>
-                                    </form>
-
-                                </td>
                               
                             </tr>
                             @endforeach
@@ -122,12 +107,6 @@
         </div>
     </div>
 </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
                        
 
 @endsection
