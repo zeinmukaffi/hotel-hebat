@@ -61,3 +61,4 @@ Route::resource('fasilitashotel', FasilitasHotelController::class);
 
 Route::get('downloadpdfkamar', [KamarController::class, 'downloadpdf'])->name('downloadpdf');
 Route::get('downloadpdffasilitashhotel', [FasilitasHotelController::class, 'downloadpdf'])->name('downloadpdf');
+Route::get('downloadpdfpemesanan', [PemesananController::class, 'downloadpdf'])->name('downloadpdf');
