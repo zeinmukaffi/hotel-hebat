@@ -26,7 +26,7 @@ class UserController extends Controller
     }
 
     public function usertable(){
-        $datapemesanan = Pemesanan::paginate();
+        $datapemesanan = Pemesanan::latest()->paginate(1);
         $kamar = Kamar::latest()->with('datapemesanan');
         return view('dashboards.users.table' , compact('datapemesanan','kamar'));
     }

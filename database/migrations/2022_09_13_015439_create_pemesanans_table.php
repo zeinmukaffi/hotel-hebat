@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('jumlah_kamar_pesan');
             $table->date('tanggal_checkin');
             $table->date('tanggal_checkout');
-            $table->integer('harga');
+            $table->enum('status',['CheckIn','CheckOut']);
             $table->timestamps();
         });
     }

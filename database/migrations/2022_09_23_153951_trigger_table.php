@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -20,7 +21,7 @@ return new class extends Migration
         WHERE kamars.nomor_kamar = NEW.nomor_kamar_id;
         END'
     );
-        DB::unprepared('CREATE TRIGGER delete_pemesanan after DELETE ON pemesanans
+        DB::unprepared('CREATE TRIGGER delete_pemesanan after UPDATE ON pemesanans
         FOR EACH ROW
         BEGIN UPDATE kamars set
         jumlah_kamar = jumlah_kamar + OLD.jumlah_kamar_pesan

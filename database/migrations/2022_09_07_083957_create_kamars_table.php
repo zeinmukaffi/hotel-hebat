@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('nomor_kamar');
             $table->string('tipe_kamar');
-            $table->foreignId('kamar_id');
+            // $table->foreignId('kamar_id');
             $table->integer('jumlah_kamar');
             $table->string('fasilitas_kamar');
             $table->string('foto_kamar');

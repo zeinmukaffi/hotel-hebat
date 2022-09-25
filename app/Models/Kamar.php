@@ -17,6 +17,7 @@ class Kamar extends Model
         'fasilitas_kamar',
         'foto_kamar',
         'harga_kamar',
+        // 'kamar_id',
     ];
 
     protected $primaryKey = "id";

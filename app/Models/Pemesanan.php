@@ -19,7 +19,7 @@ class Pemesanan extends Model
         'jumlah_kamar_pesan',
         'tanggal_checkin',
         'tanggal_checkout',
-        'harga',
+        'status',
     ];
 
     public function kamar()

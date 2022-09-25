@@ -8,7 +8,7 @@
         <div class="text-1">
             <p>welcome to</p>
             <h1>hotel<span class="blue">hebat</span></h1>
-            <a href=""><button type="button" class="btn btn-secondary">book now</button></a>
+            <a href="/pemesananhotel"><button type="button" class="btn btn-secondary">book now</button></a>
         </div>
     </div>
 </section>

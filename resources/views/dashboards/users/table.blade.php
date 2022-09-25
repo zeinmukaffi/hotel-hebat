@@ -1,112 +1,34 @@
 @extends('layouts.after')
-@section('content')
-
-<div class="row">
-    <div class="col-11 mx-auto">
-        <div class="card mb-4">
-            <div class="card-header pb-0">
-                <h6 class="fw-bold">Table Pesanan</h6>
-            </div>
-            <div class="card-body px-0 pt-0 pb-2">
-                <div class="table-responsive p-0 mt-5">
-                    <table class="table align-items-center mb-0">
-                        <thead>
-                            <tr>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    No</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Nama Pemesan</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Alamat Pemesan</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Email</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Nomor Telepon</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Tipe Kamar</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Jumlah Kamar</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Tanggal Checkin</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Tanggal Checkout</th>
-                                <th
-                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Total Harga</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($datapemesanan as $index => $item)
-                            <tr>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $loop -> iteration }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> nama }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> alamat }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> email }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> no_telp }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> kamar -> tipe_kamar }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> jumlah_kamar_pesan }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> tanggal_checkin }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> tanggal_checkout }}
-                                    </p>
-                                </td>
-                                <td class="align-middle text-center text-sm">
-                                    <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> harga }}
-                                    </p>
-                                </td>
-                              
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+@section('content')    
+<section id="table">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <h3 class="fw-bold me-2">bukti pesan</h3>
+                    <p class="fst-italic text-danger mt-2">*harap screenshot</p>
                 </div>
+                    @foreach ($datapemesanan as $item)
+                        <div class="row">
+                            <div class="col-4"><span>nama pemesan : <p class="fw-bold">{{ $item->nama }}</p></span>
+                            </div>
+                            <div class="col-4"><span>email pemesan : <p class="fw-bold">{{ $item->email }}</p></span></div>
+                            <div class="col-4"><span>telepon pemesan : <p class="fw-bold">{{ $item->no_telp }}</p></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4"><span>tipe kamar : <p class="fw-bold">{{ $item->kamar->tipe_kamar }}</p></span></div>
+                            <div class="col-4"><span>tanggal check in : <p class="fw-bold">{{ $item->tanggal_checkin }}</p</span></div>
+                            <div class="col-4"><span>tanggal check out : <p class="fw-bold">{{ $item->tanggal_checkout }}</p></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4"><span>jumlah kamar yang dipesan kamar : <p class="fw-bold">{{ $item->jumlah_kamar_pesan }}</p></span></div>
+                            <div class="col-4"><span>total yang harus dibayar :<p class="fw-bold">Rp. {{ $item->jumlah_kamar_pesan * $item->kamar->harga_kamar }}</p</span></div>
+                            <div class="col-4 mt-4"><a href="/user/dashboard" class="btn btn-info text-white">done</a>
+                            </div>
+                        </div>
+                    @endforeach
             </div>
         </div>
     </div>
-</div>
-                       
-
+</section>
 @endsection

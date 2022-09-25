@@ -49,7 +49,7 @@ class PemesananController extends Controller
             'jumlah_kamar_pesan' => 'required',
             'tanggal_checkin' => 'required',
             'tanggal_checkout'=> 'required',
-            'harga' => 'required',
+            'status' => 'required',
         ]);
 
         Pemesanan::create([
@@ -61,7 +61,7 @@ class PemesananController extends Controller
            'jumlah_kamar_pesan' => $request->jumlah_kamar_pesan,
            'tanggal_checkin' => $request->tanggal_checkin,
            'tanggal_checkout' => $request->tanggal_checkout,
-           'harga' => $request->harga,
+           'status' => $request->status,
 
         ]);
 
