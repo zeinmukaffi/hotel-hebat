@@ -35,9 +35,14 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label class="form-label">jumlah Kamar</label>
-                <input type="number" placeholder="Masukan Jumlah Kamar Dipesan" name="jumlah_kamar_pesan"
-                    class="form-control">
+                <label class="form-label">Jumlah Kamar</label>
+                <select name="jumlah_kamar_pesan">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
             <div class="mb-3">
                 <label class="form-label">Tanggal Checkin</label>

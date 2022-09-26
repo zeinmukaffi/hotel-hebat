@@ -44,7 +44,14 @@
                         <div class="mb-3">
                             <label class="fw-normal">jumlah kamar</label>
                             <br>
-                            <input type="text" name="jumlah_kamar_pesan" placeholder="berapa anda memesan kamar?">
+                            {{-- <input type="text" name="jumlah_kamar_pesan" placeholder="berapa anda memesan kamar?"> --}}
+                            <select name="jumlah_kamar_pesan">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label class="fw-normal">tanggal check in</label>

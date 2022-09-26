@@ -30,6 +30,7 @@ class UserController extends Controller
         $kamar = Kamar::latest()->with('datapemesanan');
         return view('dashboards.users.table' , compact('datapemesanan','kamar'));
     }
+    
     public function adminPemesanan(){
         $datapemesanan = Pemesanan::paginate();
         $kamar = Kamar::latest()->with('datapemesanan');
