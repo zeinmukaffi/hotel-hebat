@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kamar;
 use App\Models\Pemesanan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -15,11 +16,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        // $deluxe = Kamar::count('jumlah_kamar');
-        // $superior = Kamar::count('jumlah_kamar');
-        // $totalkamar = Kamar::count('jumlah_kamar');
+        $totalkamar = Kamar::sum('jumlah_kamar');
         $pemesan = Pemesanan::count();
-        return view('dashboards.admins.index', compact('pemesan'));
+        return view('dashboards.admins.index', compact('pemesan','totalkamar'));
     }
 
     /**
