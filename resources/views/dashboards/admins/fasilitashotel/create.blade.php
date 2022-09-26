@@ -7,7 +7,7 @@
                 <form action="{{ url('fasilitashotel') }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                       <div class="mb-3">
-                          <label class="form-label">Fasilitas Hotel :)</label>
+                          <label class="form-label">Nama Fasilitas Hotel </label>
                           <input type="text" class="form-control" placeholder="Fasilitas Hotel" name="nama_fasilitas_hotel">
                       </div>
                       <div class="mb-3">

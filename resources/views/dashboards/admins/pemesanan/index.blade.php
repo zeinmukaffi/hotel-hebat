@@ -79,7 +79,7 @@
                                 </td>
                                 <td class="align-middle text-center text-sm">
                                     <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> jumlah_kamar }}
+                                        {{ $item -> jumlah_kamar_pesan }}
                                     </p>
                                 </td>
                                 <td class="align-middle text-center text-sm">
@@ -94,7 +94,7 @@
                                 </td>
                                 <td class="align-middle text-center text-sm">
                                     <p class="text-xs font-weight-bold mb-0 text-center">
-                                        {{ $item -> harga }}
+                                        {{ Carbon\Carbon::parse($item->tanggal_checkin)->diffInDays($item->tanggal_checkout) * $item->kamar->harga_kamar * $item->jumlah_kamar_pesan }}
                                     </p>
                                 </td>
                               

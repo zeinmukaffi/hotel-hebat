@@ -26,15 +26,15 @@
         @foreach ( $data as $data )
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $item -> nama }}</td>
-                <td>{{ $item -> alamat }}</td>
-                <td>{{ $item -> email }}</td>
-                <td>{{ $item -> no_telp }}</td>
-                <td>{{ $item -> tipe_kamar }}</td>
-                <td>{{ $item -> jumlah_kamar }}</td>
-                <td>{{ $item -> tanggal_checkin }}</td>
-                <td>{{ $item -> tanggal_checkout }}</td>
-                <td>{{ $item -> harga }}</td>
+                <td>{{ $data -> nama }}</td>
+                <td>{{ $data -> alamat }}</td>
+                <td>{{ $data -> email }}</td>
+                <td>{{ $data -> no_telp }}</td>
+                <td>{{ $data -> kamar -> tipe_kamar }}</td>
+                <td>{{ $data -> jumlah_kamar_pesan }}</td>
+                <td>{{ $data -> tanggal_checkin }}</td>
+                <td>{{ $data -> tanggal_checkout }}</td>
+                <td>{{ Carbon\Carbon::parse($data->tanggal_checkin)->diffInDays($data->tanggal_checkout) * $data->kamar->harga_kamar * $data->jumlah_kamar_pesan }}</td>
             </tr>
         @endforeach
     </table>

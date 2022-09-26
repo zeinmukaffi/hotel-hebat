@@ -10,6 +10,7 @@ class DashboardController extends Controller
     {
         return view('beforeLogin.fasilitas');
     }
+    
     public function kamar()
     {
         return view('beforeLogin.kamar');

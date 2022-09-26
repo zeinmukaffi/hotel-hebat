@@ -7,7 +7,7 @@
                 <form action="{{ url('kamar') }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                 <div class="mb-3">
-                          <label class="form-label">Nama Kamar</label>
+                          <label class="form-label">Tipe Kamar</label>
                           <input type="text" class="form-control" placeholder="Masukan Tipe Kamar" name="tipe_kamar">
                 <div class="mb-3">
                           <label class="form-label">Nomor Kamar</label>
