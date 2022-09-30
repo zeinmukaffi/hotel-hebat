@@ -49,8 +49,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['isUser', 'auth', 'PreventBac
     Route::get('dashboard', [UserController::class, 'index'])->name('user.dashboard');
 });
 
-Route::resource('pemesananhotel', PemesananController::class);
-Route::resource('pesanhotel', ResepsionisController::class);
+Route::resource('pemesananhotel', PemesananController::class); // pemesanan untuk user
+Route::resource('pesanhotel', ResepsionisController::class); // pemesanan untuk resepsionis
 Route::get('/tipekamar', [DashboardController::class, 'kamar'])->name('kamar');  
 Route::get('/fasilitas', [DashboardController::class, 'fasilitas'])->name('fasilitas');  
 Route::get('/userKamar', [UserController::class, 'userKamar'])->name('userKamar');  
